@@ -94,5 +94,12 @@ typedef id (^OCUDLBlock)(NSString*, NSString*);
  */
 - (void)registerSuffix:(NSString*)suffix forBlock:(OCUDLBlock)block;
 
+/**
+ * Retrieves the user defined literal for a literal.
+ * When a literal is not found, it returns nil.
+ * @param literal The literal.
+ */
+- (id)ocudlForLiteral:(const char *)literal;
+
 @end
 
